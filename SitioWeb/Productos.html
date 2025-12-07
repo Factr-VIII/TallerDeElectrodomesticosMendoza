@@ -1,0 +1,636 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Productos - Taller de Electrodomésticos Mendoza</title>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- FontAwesome -->
+    <script src="https://kit.fontawesome.com/a2c1235c9a.js" crossorigin="anonymous"></script>
+
+    <style>
+        :root {
+            --color-primario: #002b5b;
+            --color-acento: #ff6600;
+        }
+
+        body {
+            font-family: "Poppins", sans-serif;
+        }
+
+        .navbar {
+            background-color: var(--color-primario);
+        }
+
+        .nav-link:hover,
+        .nav-link.active {
+            color: var(--color-acento) !important;
+        }
+
+        .page-header {
+            background-color: #f3f4f6;
+            padding: 2.3rem 0;
+        }
+
+        .page-header h1 {
+            font-weight: 700;
+        }
+
+        /* TARJETAS PRODUCTOS PRINCIPALES */
+        .product-card {
+            border-radius: 1rem;
+            overflow: hidden;
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
+            border: 0;
+        }
+
+        .product-card:hover {
+            transform: translateY(-6px);
+            box-shadow: 0 10px 22px rgba(0, 0, 0, 0.15);
+        }
+
+        .product-card img {
+            height: 190px;
+            width: 100%;
+            object-fit: contain;
+            background-color: #f7f7f7;
+            padding: 10px;
+        }
+
+        .product-badge {
+            font-size: 0.65rem;
+            padding: 0.2rem 0.6rem;
+            border-radius: 999px;
+        }
+
+        /* MINI TARJETAS DETALLE */
+        .mini-product-card {
+            border-radius: 1rem;
+            overflow: hidden;
+            border: 0;
+            box-shadow: 0 6px 18px rgba(15, 23, 42, 0.12);
+            height: 100%;
+        }
+
+        .mini-product-card img {
+            height: 140px;
+            width: 100%;
+            object-fit: contain;
+            background-color: #f7f7f7;
+            padding: 10px;
+        }
+
+        footer {
+            background-color: #111827;
+            color: #e5e7eb;
+        }
+    </style>
+</head>
+
+<body class="d-flex flex-column min-vh-100">
+
+    <!-- NAVBAR -->
+    <nav class="navbar navbar-expand-lg navbar-dark">
+        <div class="container">
+            <a class="navbar-brand fw-bold" href="Index.html">
+                Taller Mendoza
+            </a>
+            <button class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#menuProd">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="menuProd">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="Index.html">Inicio</a></li>
+                    <li class="nav-item"><a class="nav-link" href="Servicios.html">Servicios</a></li>
+                    <li class="nav-item"><a class="nav-link active" href="Productos.html">Productos</a></li>
+                    <li class="nav-item"><a class="nav-link" href="Historia.html">Historia</a></li>
+                    <li class="nav-item"><a class="nav-link" href="Contacto.html">Contacto</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- ENCABEZADO -->
+    <header class="page-header">
+        <div class="container">
+            <h1 class="mb-1">Productos</h1>
+            <p class="text-muted mb-0">
+                Contamos con equipos nuevos y refacciones que complementan nuestros servicios de reparación.
+            </p>
+        </div>
+    </header>
+
+    <!-- CONTENIDO -->
+    <main class="flex-grow-1 py-5">
+        <div class="container">
+
+            <!-- ===================== EQUIPOS NUEVOS ===================== -->
+            <section class="mb-5">
+                <h2 class="h4 mb-2">Equipos nuevos</h2>
+                <p class="text-muted mb-4">
+                    Equipos listos para usarse, ideales para trabajo en el hogar, taller o negocio. Pregunta por la
+                    disponibilidad y modelos específicos.
+                </p>
+
+                <div class="row g-4">
+
+                    <!-- Herramientas eléctricas nuevas -->
+                    <div class="col-md-6 col-lg-4">
+                        <div class="card product-card shadow-sm h-100">
+                            <img src="img/ProductosHerramientasPresentacion.png" alt="Herramientas eléctricas nuevas">
+                            <div class="card-body">
+                                <div class="d-flex justify-content-between align-items-center mb-2">
+                                    <h5 class="card-title mb-0">Herramientas eléctricas</h5>
+                                    <span class="badge bg-success product-badge">Equipo nuevo</span>
+                                </div>
+                                <p class="card-text mb-2">
+                                    Taladros, pulidoras, rotomartillos y esmeriles nuevos para uso doméstico y de
+                                    trabajo.
+                                </p>
+                                <a href="#det-herramientas" class="btn btn-outline-primary btn-sm">
+                                    Ver modelos
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Bombas de agua centrífugas -->
+                    <div class="col-md-6 col-lg-4">
+                        <div class="card product-card shadow-sm h-100">
+                            <img src="img/ProductosBombasPresentacion.png" alt="Bombas de agua centrífugas nuevas">
+                            <div class="card-body">
+                                <div class="d-flex justify-content-between align-items-center mb-2">
+                                    <h5 class="card-title mb-0">Bombas de agua centrífugas</h5>
+                                    <span class="badge bg-success product-badge">Equipo nuevo</span>
+                                </div>
+                                <p class="card-text mb-2">
+                                    Bombas de agua para uso doméstico y agrícola, listas para instalación.
+                                </p>
+                                <a href="#det-bombas-centrifugas" class="btn btn-outline-primary btn-sm">
+                                    Ver modelos
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Bombas de agua sumergibles y cajas -->
+                    <div class="col-md-6 col-lg-4">
+                        <div class="card product-card shadow-sm h-100">
+                            <img src="img/ProductosBombaSumergiblePresentacion.png" alt="Bombas sumergibles y caja de control">
+                            <div class="card-body">
+                                <div class="d-flex justify-content-between align-items-center mb-2">
+                                    <h5 class="card-title mb-0">Bombas sumergibles y cajas</h5>
+                                    <span class="badge bg-success product-badge">Equipo nuevo</span>
+                                </div>
+                                <p class="card-text mb-2">
+                                    Bombas sumergibles y cajas de control para pozos y sistemas de agua.
+                                </p>
+                                <a href="#det-bombas-sumergibles" class="btn btn-outline-primary btn-sm">
+                                    Ver modelos
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Mini estufas de gas -->
+                    <div class="col-md-6 col-lg-4">
+                        <div class="card product-card shadow-sm h-100">
+                            <img src="img/ProductosEstufaPresentacion.png" alt="Mini estufa de gas">
+                            <div class="card-body">
+                                <div class="d-flex justify-content-between align-items-center mb-2">
+                                    <h5 class="card-title mb-0">Mini estufas de gas</h5>
+                                    <span class="badge bg-success product-badge">Equipo nuevo</span>
+                                </div>
+                                <p class="card-text mb-2">
+                                    Estufas de gas compactas, ideales para cocinas pequeñas, locales o uso temporal.
+                                </p>
+                                <a href="#det-mini-estufas" class="btn btn-outline-primary btn-sm">
+                                    Ver modelos
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </section>
+
+            <!-- ===================== DETALLE: HERRAMIENTAS ELÉCTRICAS ===================== -->
+            <section id="det-herramientas" class="mb-5">
+                <h2 class="h5 mb-2">Modelos de herramientas eléctricas</h2>
+                <p class="text-muted mb-4">
+                    Algunos de los modelos que manejamos en el taller. La existencia puede variar, por lo que se
+                    recomienda confirmar antes de acudir.
+                </p>
+
+                <div class="row g-4">
+
+                    <!-- Taladro percutor -->
+                    <div class="col-md-6 col-lg-3">
+                        <div class="card mini-product-card">
+                            <img src="img/ProductosHerramientasElectTapladro1l2.png" alt="Taladro percutor 1/2">
+                            <div class="card-body">
+                                <h6 class="card-title mb-1">Taladro percutor 1/2"</h6>
+                                <p class="card-text small mb-0">
+                                    Ideal para perforación en madera, metal y concreto ligero. Práctico para uso
+                                    doméstico y de trabajo.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Pulidora angular -->
+                    <div class="col-md-6 col-lg-3">
+                        <div class="card mini-product-card">
+                            <img src="img/ProductosHerramientasElectricaPulidora7.png" alt="Pulidora angular 7 pulgadas">
+                            <div class="card-body">
+                                <h6 class="card-title mb-1">Pulidora angular 7"</h6>
+                                <p class="card-text small mb-0">
+                                    Herramienta para corte y desbaste en metal y concreto, usada comúnmente en
+                                    herrería y construcción.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Rotomartillo SDS Plus -->
+                    <div class="col-md-6 col-lg-3">
+                        <div class="card mini-product-card">
+                            <img src="img/ProductoHerramientaElectricaRotoMartillo.png" alt="Rotomartillo SDS Plus">
+                            <div class="card-body">
+                                <h6 class="card-title mb-1">Rotomartillo SDS Plus</h6>
+                                <p class="card-text small mb-0">
+                                    Diseñado para perforar concreto y mampostería con mayor fuerza y menor esfuerzo.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Esmeril de banco -->
+                    <div class="col-md-6 col-lg-3">
+                        <div class="card mini-product-card">
+                            <img src="img/ProductosHerramientasElectricaEsmerilDeBanco.png" alt="Esmeril de banco">
+                            <div class="card-body">
+                                <h6 class="card-title mb-1">Esmeril de banco</h6>
+                                <p class="card-text small mb-0">
+                                    Utilizado para afilar herramientas, desbastar piezas y trabajos de mantenimiento en
+                                    taller.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </section>
+
+            <!-- ===================== DETALLE: BOMBAS CENTRÍFUGAS ===================== -->
+            <section id="det-bombas-centrifugas" class="mb-5">
+                <h2 class="h5 mb-2">Modelos de bombas centrífugas</h2>
+                <p class="text-muted mb-4">
+                    Bombas para diferentes aplicaciones en casa, comercio y uso ligero en el campo.
+                </p>
+
+                <div class="row g-4">
+
+                    <!-- Bomba 1/2 HP doméstica -->
+                    <div class="col-md-6 col-lg-3">
+                        <div class="card mini-product-card">
+                            <img src="img/ProductosBombasBomba1l2 HP.png" alt="Bomba 1/2 HP doméstica">
+                            <div class="card-body">
+                                <h6 class="card-title mb-1">Bomba 1/2 HP doméstica</h6>
+                                <p class="card-text small mb-0">
+                                    Recomendada para viviendas con tinaco y uso moderado de agua.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Bomba 1 HP -->
+                    <div class="col-md-6 col-lg-3">
+                        <div class="card mini-product-card">
+                            <img src="img/ProductosBombaBomba1HP.png" alt="Bomba 1 HP">
+                            <div class="card-body">
+                                <h6 class="card-title mb-1">Bomba 1 HP</h6>
+                                <p class="card-text small mb-0">
+                                    Para mayor demanda de agua, pequeños negocios o riego ligero.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Bomba periférica -->
+                    <div class="col-md-6 col-lg-3">
+                        <div class="card mini-product-card">
+                            <img src="img/ProductoBombasBombaPeriferica.png" alt="Bomba periférica">
+                            <div class="card-body">
+                                <h6 class="card-title mb-1">Bomba periférica</h6>
+                                <p class="card-text small mb-0">
+                                    Especial para alimentar tinacos y cisternas con presiones de trabajo estables.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Bomba uso agrícola ligero -->
+                    <div class="col-md-6 col-lg-3">
+                        <div class="card mini-product-card">
+                            <img src="img/ProductoBombasBombaAgricola.png" alt="Bomba uso agrícola">
+                            <div class="card-body">
+                                <h6 class="card-title mb-1">Bomba uso agrícola ligero</h6>
+                                <p class="card-text small mb-0">
+                                    Adecuada para riego de pequeñas áreas verdes o huertos familiares.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </section>
+
+            <!-- ===================== DETALLE: BOMBAS SUMERGIBLES Y CAJAS ===================== -->
+            <section id="det-bombas-sumergibles" class="mb-5">
+                <h2 class="h5 mb-2">Modelos de bombas sumergibles y cajas de control</h2>
+                <p class="text-muted mb-4">
+                    Opciones para pozos, cisternas y sistemas que requieren operación sumergida.
+                </p>
+
+                <div class="row g-4">
+
+                    <!-- Sumergible 1 HP -->
+                    <div class="col-md-6 col-lg-4">
+                        <div class="card mini-product-card">
+                            <img src="img/PoductoBombaSumergible1HP.png" alt="Bomba sumergible 1 HP">
+                            <div class="card-body">
+                                <h6 class="card-title mb-1">Bomba sumergible 1 HP</h6>
+                                <p class="card-text small mb-0">
+                                    Ideal para pozos de uso doméstico y llenado de tinacos desde cisterna.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Sumergible pozo profundo -->
+                    <div class="col-md-6 col-lg-4">
+                        <div class="card mini-product-card">
+                            <img src="img/ProductoBombaSumergiblePozo.png" alt="Bomba para pozo profundo">
+                            <div class="card-body">
+                                <h6 class="card-title mb-1">Bomba para pozo profundo</h6>
+                                <p class="card-text small mb-0">
+                                    Diseñada para mayor profundidad, recomendada en ranchos y zonas rurales.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Caja de control -->
+                    <div class="col-md-6 col-lg-4">
+                        <div class="card mini-product-card">
+                            <img src="img/ProductoBombaCajaSumergible.png" alt="Caja de control">
+                            <div class="card-body">
+                                <h6 class="card-title mb-1">Caja de control para sumergible</h6>
+                                <p class="card-text small mb-0">
+                                    Protege y controla la operación de la bomba sumergible, con relevador y protección
+                                    térmica.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </section>
+
+            <!-- ===================== DETALLE: MINI ESTUFAS DE GAS ===================== -->
+            <section id="det-mini-estufas" class="mb-5">
+                <h2 class="h5 mb-2">Modelos de mini estufas de gas</h2>
+                <p class="text-muted mb-4">
+                    Opciones compactas para espacios reducidos o uso temporal en negocio o hogar.
+                </p>
+
+                <div class="row g-4">
+
+                    <!-- Un quemador -->
+                    <div class="col-md-6 col-lg-4">
+                        <div class="card mini-product-card">
+                            <img src="img/ProductoEstufaEstufa1Quemador.png" alt="Estufa de un quemador">
+                            <div class="card-body">
+                                <h6 class="card-title mb-1">Estufa de un quemador</h6>
+                                <p class="card-text small mb-0">
+                                    Práctica para espacios muy pequeños, puestos móviles o uso ocasional.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Dos quemadores -->
+                    <div class="col-md-6 col-lg-4">
+                        <div class="card mini-product-card">
+                            <img src="img/ProductoEstufaEstufa2Quemadores.png" alt="Estufa de dos quemadores">
+                            <div class="card-body">
+                                <h6 class="card-title mb-1">Estufa de dos quemadores</h6>
+                                <p class="card-text small mb-0">
+                                    Ofrece mayor comodidad para cocinar dos cosas al mismo tiempo sin ocupar tanto
+                                    espacio.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Parrilla portátil -->
+                    <div class="col-md-6 col-lg-4">
+                        <div class="card mini-product-card">
+                            <img src="img/ProductoEstufaParrillaPortatil.png" alt="Parrilla portátil">
+                            <div class="card-body">
+                                <h6 class="card-title mb-1">Parrilla portátil</h6>
+                                <p class="card-text small mb-0">
+                                    Ideal para negocios ambulantes, eventos o como apoyo en cocinas con alta demanda.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </section>
+
+            <!-- ===================== REFACCIONES Y ACCESORIOS ===================== -->
+            <section>
+                <h2 class="h4 mb-2">Refacciones y accesorios</h2>
+                <p class="text-muted mb-4">
+                    Refacciones para diferentes tipos de equipos. Estas se organizan por tipo de aparato para
+                    facilitar la consulta. Si no ves lo que buscas, puedes preguntar directamente en el taller.
+                </p>
+
+                <div class="row g-4">
+
+                    <!-- Refacciones para ventiladores -->
+                    <div class="col-md-6 col-lg-4">
+                        <div class="card product-card shadow-sm h-100">
+                            <img src="img/ProductoRefaccionesVentiladores.png" alt="Refacciones para ventiladores">
+                            <div class="card-body">
+                                <div class="d-flex justify-content-between align-items-center mb-2">
+                                    <h5 class="card-title mb-0">Refacciones para ventiladores</h5>
+                                    <span class="badge bg-primary product-badge">Refacciones</span>
+                                </div>
+                                <p class="card-text mb-2">
+                                    Bujes, flechas, osciladores, selectores, hélices, parrillas y capacitores.
+                                </p>
+                                <p class="text-muted small mb-0">
+                                    Ideales para recuperar ventiladores que han perdido fuerza o hacen ruido.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Refacciones para bombas de agua -->
+                    <div class="col-md-6 col-lg-4">
+                        <div class="card product-card shadow-sm h-100">
+                            <img src="img/ProductoRefaccionesBombas.png" alt="Refacciones para bombas de agua">
+                            <div class="card-body">
+                                <div class="d-flex justify-content-between align-items-center mb-2">
+                                    <h5 class="card-title mb-0">Refacciones para bombas de agua</h5>
+                                    <span class="badge bg-primary product-badge">Refacciones</span>
+                                </div>
+                                <p class="card-text mb-2">
+                                    Rodamientos, sellos mecánicos, flechas, empaques, platinos y capacitores.
+                                </p>
+                                <p class="text-muted small mb-0">
+                                    Componentes básicos para reparación y mantenimiento de bombas centrífugas y sumergibles.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Refacciones para estufas -->
+                    <div class="col-md-6 col-lg-4">
+                        <div class="card product-card shadow-sm h-100">
+                            <img src="img/ProductoRefaccionesEstufa.png" alt="Refacciones para estufas">
+                            <div class="card-body">
+                                <div class="d-flex justify-content-between align-items-center mb-2">
+                                    <h5 class="card-title mb-0">Refacciones para estufas</h5>
+                                    <span class="badge bg-primary product-badge">Refacciones</span>
+                                </div>
+                                <p class="card-text mb-2">
+                                    Perillas, parrillas, quemadores, mangueras, reguladores y encendedores.
+                                </p>
+                                <p class="text-muted small mb-0">
+                                    Pensadas para estufas domésticas y mini estufas de gas.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Refacciones para lavadoras -->
+                    <div class="col-md-6 col-lg-4">
+                        <div class="card product-card shadow-sm h-100">
+                            <img src="img/ProductoRefaccionesLavadora.png" alt="Refacciones para lavadoras">
+                            <div class="card-body">
+                                <div class="d-flex justify-content-between align-items-center mb-2">
+                                    <h5 class="card-title mb-0">Refacciones para lavadoras</h5>
+                                    <span class="badge bg-primary product-badge">Refacciones</span>
+                                </div>
+                                <p class="card-text mb-2">
+                                    Bandas, transmisiones, relojes, sapos, resortes, bombas de desagüe y mangueras.
+                                </p>
+                                <p class="text-muted small mb-0">
+                                    Compatibles con las marcas más comunes del mercado.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Refacciones para herramientas eléctricas -->
+                    <div class="col-md-6 col-lg-4">
+                        <div class="card product-card shadow-sm h-100">
+                            <img src="img/ProductosRefaccionesHerramientasElectricas.png" alt="Refacciones para herramientas eléctricas">
+                            <div class="card-body">
+                                <div class="d-flex justify-content-between align-items-center mb-2">
+                                    <h5 class="card-title mb-0">Pulidoras, taladros y otras herramientas</h5>
+                                    <span class="badge bg-primary product-badge">Refacciones</span>
+                                </div>
+                                <p class="card-text mb-2">
+                                    Carbones, engranes, interruptores, cables, baleros y otros componentes internos.
+                                </p>
+                                <p class="text-muted small mb-0">
+                                    Ideales para prolongar la vida útil de herramientas de trabajo diario.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Refacciones para licuadoras -->
+                    <div class="col-md-6 col-lg-4">
+                        <div class="card product-card shadow-sm h-100">
+                            <img src="img/ProductoRefaccionesLicuadora.png" alt="Refacciones para licuadoras">
+                            <div class="card-body">
+                                <div class="d-flex justify-content-between align-items-center mb-2">
+                                    <h5 class="card-title mb-0">Refacciones para licuadoras</h5>
+                                    <span class="badge bg-primary product-badge">Refacciones</span>
+                                </div>
+                                <p class="card-text mb-2">
+                                    Vasos, aspas, acoplamientos, empaques, bases, carbones y puentes.
+                                </p>
+                                <p class="text-muted small mb-0">
+                                    Para licuadoras domésticas y semi-industriales.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Otros consumibles -->
+                    <div class="col-md-6 col-lg-4">
+                        <div class="card product-card shadow-sm h-100">
+                            <img src="img/ProductosVarios.png" alt="Otros accesorios y consumibles">
+                            <div class="card-body">
+                                <div class="d-flex justify-content-between align-items-center mb-2">
+                                    <h5 class="card-title mb-0">Otros accesorios</h5>
+                                    <span class="badge bg-primary product-badge">Refacciones</span>
+                                </div>
+                                <p class="card-text mb-2">
+                                    Cables, clavijas, interruptores, terminales, mangueras, conectores y otros
+                                    consumibles eléctricos.
+                                </p>
+                                <p class="text-muted small mb-0">
+                                    Pregunta directamente en el taller por piezas específicas que necesites.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+                <!-- Nota al cliente -->
+                <div class="mt-5 text-center">
+                    <p class="text-muted mb-1">
+                        <i class="fas fa-info-circle me-1"></i>
+                        La existencia de productos puede variar según la temporada y la demanda.
+                    </p>
+                    <p class="mb-0">
+                        Envíanos un mensaje por <a href="Contacto.html">WhatsApp o visítanos</a> para confirmar precios y disponibilidad.
+                    </p>
+                </div>
+            </section>
+
+        </div>
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="py-3 text-center mt-auto">
+        <small>© <span id="year"></span> Taller de Electrodomésticos Mendoza – Tres Valles, Veracruz.</small>
+    </footer>
+
+    <script>
+        document.getElementById("year").textContent = new Date().getFullYear();
+    </script>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>

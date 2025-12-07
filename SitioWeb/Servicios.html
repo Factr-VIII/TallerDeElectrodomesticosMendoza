@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Servicios - Taller de Electrodomésticos Mendoza</title>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- FontAwesome -->
+    <script src="https://kit.fontawesome.com/a2c1235c9a.js" crossorigin="anonymous"></script>
+
+    <style>
+        :root {
+            --color-primario: #002b5b;
+            --color-acento: #ff6600;
+        }
+
+        body {
+            font-family: "Poppins", sans-serif;
+        }
+
+        .navbar {
+            background-color: var(--color-primario);
+        }
+
+        .nav-link:hover,
+        .nav-link.active {
+            color: var(--color-acento) !important;
+        }
+
+        .page-header {
+            background-color: #f3f4f6;
+            padding: 2.3rem 0;
+        }
+
+        /* TARJETAS */
+        .service-card {
+            border-radius: 1rem;
+            overflow: hidden;
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
+            border: 0;
+        }
+
+        .service-card:hover {
+            transform: translateY(-6px);
+            box-shadow: 0 10px 22px rgba(0, 0, 0, 0.15);
+        }
+
+        .card-img-top {
+    height: 200px;        
+    width: 100%;
+    object-fit: contain;  
+    background-color: #f7f7f7; 
+    padding: 10px;        
+        }
+
+        /* ICONOS */
+        .service-icon {
+            width: 32px;
+            height: 32px;
+            border-radius: 50%;
+            background-color: rgba(0, 43, 91, 0.08);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 0.95rem;
+            color: var(--color-primario);
+        }
+
+        /* BADGES */
+        .service-badge {
+            font-size: 0.65rem;
+            padding: 0.25rem 0.6rem;
+            border-radius: 999px;
+            text-transform: uppercase;
+        }
+
+        footer {
+            background-color: #111827;
+            color: #e5e7eb;
+        }
+    </style>
+</head>
+
+<body class="d-flex flex-column min-vh-100">
+
+    <!-- NAVBAR -->
+    <nav class="navbar navbar-expand-lg navbar-dark">
+        <div class="container">
+            <a class="navbar-brand fw-bold" href="Index.html">Taller Mendoza</a>
+            <button class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#menu">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="menu">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="Index.html">Inicio</a></li>
+                    <li class="nav-item"><a class="nav-link active" href="Servicios.html">Servicios</a></li>
+                    <li class="nav-item"><a class="nav-link" href="Productos.html">Productos</a></li>
+                    <li class="nav-item"><a class="nav-link" href="Historia.html">Historia</a></li>
+                    <li class="nav-item"><a class="nav-link" href="Contacto.html">Contacto</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- ENCABEZADO -->
+    <header class="page-header">
+        <div class="container">
+            <h1 class="fw-bold mb-1">Nuestros Servicios</h1>
+            <p class="text-muted">Mantenimiento preventivo y correctivo de electrodomésticos y equipos eléctricos.</p>
+        </div>
+    </header>
+
+    <!-- CONTENIDO -->
+    <main class="flex-grow-1 py-5">
+        <div class="container">
+            <div class="row g-4">
+
+                <!-- VENTILADORES -->
+                <div class="col-md-6 col-lg-4">
+                    <div class="card service-card shadow-sm h-100">
+                        <img src="img/ServiciosVentilador.png" alt="Ventiladores">
+
+                        <div class="card-body">
+                            <div class="d-flex justify-content-between align-items-center mb-2">
+                                <div class="d-flex align-items-center gap-2">
+                                    <div class="service-icon"><i class="fas fa-fan"></i></div>
+                                    <h4 class="card-title mb-0">Ventiladores</h4>
+                                </div>
+                                <span class="badge bg-primary service-badge">Preventivo y correctivo</span>
+                            </div>
+
+                            <p class="mb-2">Mantenimiento para ventiladores de mesa, pedestal y pared.</p>
+
+                            <button class="btn btn-sm btn-outline-primary" data-bs-toggle="collapse"
+                                data-bs-target="#ventiInfo">Ver detalles</button>
+
+                            <div id="ventiInfo" class="collapse mt-3">
+                                <p><strong>Preventivo:</strong> limpieza, lubricación, pruebas eléctricas.</p>
+                                <p><strong>Correctivo:</strong> bujes, flecha, oscilador, selector, embobinado.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- LICUADORAS -->
+                <div class="col-md-6 col-lg-4">
+                    <div class="card service-card shadow-sm h-100">
+                        <img src="img/ServiciosLicuadoras.png" alt="Licuadoras">
+
+                        <div class="card-body">
+                            <div class="d-flex justify-content-between align-items-center mb-2">
+                                <div class="d-flex align-items-center gap-2">
+                                    <div class="service-icon"><i class="fas fa-blender"></i></div>
+                                    <h4 class="card-title mb-0">Licuadoras</h4>
+                                </div>
+                                <span class="badge bg-primary service-badge">Preventivo y correctivo</span>
+                            </div>
+
+                            <p class="mb-2">Reparación de licuadoras domésticas y semi-industriales.</p>
+
+                            <button class="btn btn-sm btn-outline-primary" data-bs-toggle="collapse"
+                                data-bs-target="#licuaInfo">Ver detalles</button>
+
+                            <div id="licuaInfo" class="collapse mt-3">
+                                <p><strong>Correctivo:</strong> carbones, flechas, bujes, puentes, motor.</p>
+                                <p><strong>Preventivo:</strong> limpieza, lubricación, pruebas de velocidad.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- BOMBAS DE AGUA -->
+                <div class="col-md-6 col-lg-4">
+                    <div class="card service-card shadow-sm h-100">
+                        <img src="img/ServiciosBombaDeAgua.png" alt="Bombas de agua">
+
+                        <div class="card-body">
+                            <div class="d-flex justify-content-between align-items-center mb-2">
+                                <div class="d-flex align-items-center gap-2">
+                                    <div class="service-icon"><i class="fas fa-tint"></i></div>
+                                    <h4 class="card-title mb-0">Bombas de Agua</h4>
+                                </div>
+                                <span class="badge bg-primary service-badge">Preventivo y correctivo</span>
+                            </div>
+
+                            <p class="mb-2">Reparación, mantenimiento y embobinado profesional.</p>
+
+                            <button class="btn btn-sm btn-outline-primary" data-bs-toggle="collapse"
+                                data-bs-target="#bombaInfo">Ver detalles</button>
+
+                            <div id="bombaInfo" class="collapse mt-3">
+                                <p><strong>Correctivo:</strong> rodamientos, sello, flecha, platinos, embobinado.</p>
+                                <p><strong>Preventivo:</strong> limpieza, lubricación y pruebas de presión.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- MOTORES -->
+                <div class="col-md-6 col-lg-4">
+                    <div class="card service-card shadow-sm h-100">
+                        <img src="img/ServiciosEmbobinado.png" alt="Motores eléctricos">
+
+                        <div class="card-body">
+                            <div class="d-flex justify-content-between align-items-center mb-2">
+                                <div class="d-flex align-items-center gap-2">
+                                    <div class="service-icon"><i class="fas fa-cog"></i></div>
+                                    <h4 class="card-title mb-0">Embobinado de Motores</h4>
+                                </div>
+                                <span class="badge bg-secondary service-badge">Motores eléctricos</span>
+                            </div>
+
+                            <p>Embobinado profesional de motores pequeños y medianos.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- HERRAMIENTAS -->
+                <div class="col-md-6 col-lg-4">
+                    <div class="card service-card shadow-sm h-100">
+                        <img src="img/ServicioHerramientaElectrica.png" alt="Herramientas eléctricas">
+
+                        <div class="card-body">
+                            <div class="d-flex justify-content-between align-items-center mb-2">
+                                <div class="d-flex align-items-center gap-2">
+                                    <div class="service-icon"><i class="fas fa-tools"></i></div>
+                                    <h4 class="card-title mb-0">Herramientas Eléctricas</h4>
+                                </div>
+                                <span class="badge bg-secondary service-badge">Taladros, pulidoras</span>
+                            </div>
+
+                            <p>Reparación de pulidoras, taladros, rotomartillos y más.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- LAVADORAS -->
+                <div class="col-md-6 col-lg-4">
+                    <div class="card service-card shadow-sm h-100">
+                        <img src="img/ServicioLavadora.png" alt="Lavadoras">
+
+                        <div class="card-body">
+                            <div class="d-flex justify-content-between align-items-center mb-2">
+                                <div class="d-flex align-items-center gap-2">
+                                    <div class="service-icon"><i class="fas fa-soap"></i></div>
+                                    <h4 class="card-title mb-0">Lavadoras</h4>
+                                </div>
+                                <span class="badge bg-primary service-badge">Preventivo y correctivo</span>
+                            </div>
+
+                            <p>Servicio para lavadoras automáticas y semiautomáticas.</p>
+
+                            <button class="btn btn-sm btn-outline-primary" data-bs-toggle="collapse"
+                                data-bs-target="#lavaInfo">Ver detalles</button>
+
+                            <div id="lavaInfo" class="collapse mt-3">
+                                <p><strong>Correctivo:</strong> transmisión, banda, reloj, sapo, resortes, capacitores, motor.</p>
+                                <p><strong>Preventivo:</strong> limpieza, lubricación, ajuste y pruebas.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="py-3 text-center mt-auto">
+        <small>© <span id="year"></span> Taller de Electrodomésticos Mendoza – Tres Valles, Veracruz.</small>
+    </footer>
+
+    <script>
+        document.getElementById("year").textContent = new Date().getFullYear();
+    </script>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>
