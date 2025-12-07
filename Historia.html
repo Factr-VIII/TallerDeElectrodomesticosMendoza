@@ -1,0 +1,367 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Historia - Taller de Electrodomésticos Mendoza</title>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- FontAwesome -->
+    <script src="https://kit.fontawesome.com/a2c1235c9a.js" crossorigin="anonymous"></script>
+
+    <style>
+        :root {
+            --color-primario: #002b5b;
+            --color-acento: #ff6600;
+        }
+
+        body {
+            font-family: "Poppins", sans-serif;
+        }
+
+        .navbar {
+            background-color: var(--color-primario);
+        }
+
+        .nav-link:hover,
+        .nav-link.active {
+            color: var(--color-acento) !important;
+        }
+
+        .page-header {
+            background-color: #f3f4f6;
+            padding: 2.3rem 0;
+        }
+
+        .page-header h1 {
+            font-weight: 700;
+        }
+
+        .highlight {
+            color: var(--color-acento);
+            font-weight: 600;
+        }
+
+        .historia-img {
+            border-radius: 1rem;
+            object-fit: cover;
+            max-height: 320px;
+        }
+
+        /* TIMELINE */
+        .timeline {
+            position: relative;
+            padding-left: 1.5rem;
+            border-left: 3px solid #e5e7eb;
+        }
+
+        .timeline-item {
+            position: relative;
+            margin-bottom: 1.8rem;
+        }
+
+        .timeline-item::before {
+            content: "";
+            position: absolute;
+            left: -10px;
+            top: 4px;
+            width: 14px;
+            height: 14px;
+            border-radius: 999px;
+            background-color: var(--color-primario);
+        }
+
+        .timeline-year {
+            font-weight: 600;
+            color: var(--color-primario);
+            margin-bottom: 0.1rem;
+        }
+
+        /* GALERÍA DE EVENTO */
+        .event-card {
+            border-radius: 1rem;
+            overflow: hidden;
+            border: 0;
+            box-shadow: 0 6px 18px rgba(15, 23, 42, 0.12);
+            height: 100%;
+        }
+
+        .event-card img {
+            height: 220px;
+            object-fit: cover;
+        }
+
+        footer {
+            background-color: #111827;
+            color: #e5e7eb;
+        }
+    </style>
+</head>
+
+<body class="d-flex flex-column min-vh-100">
+
+    <!-- NAVBAR -->
+    <nav class="navbar navbar-expand-lg navbar-dark">
+        <div class="container">
+            <a class="navbar-brand fw-bold" href="Index.html">Taller Mendoza</a>
+            <button class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#menuHist">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="menuHist">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="Index.html">Inicio</a></li>
+                    <li class="nav-item"><a class="nav-link" href="Servicios.html">Servicios</a></li>
+                    <li class="nav-item"><a class="nav-link" href="Productos.html">Productos</a></li>
+                    <li class="nav-item"><a class="nav-link active" href="Historia.html">Historia</a></li>
+                    <li class="nav-item"><a class="nav-link" href="Contacto.html">Contacto</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- ENCABEZADO -->
+    <header class="page-header">
+        <div class="container">
+            <h1 class="mb-1">Nuestra Historia</h1>
+            <p class="text-muted mb-0">
+                Conoce el origen, crecimiento y la esencia del Taller de Electrodomésticos Mendoza.
+            </p>
+        </div>
+    </header>
+
+    <!-- CONTENIDO -->
+    <main class="flex-grow-1 py-5">
+        <div class="container">
+
+            <!-- RESUMEN + FOTO -->
+            <div class="row g-4 align-items-center mb-5">
+                <div class="col-lg-6">
+                    <h2 class="h4 mb-3">Un taller con raíces en Tres Valles</h2>
+                    <p>
+                        El <span class="highlight">Taller de Electrodomésticos Mendoza</span> fue fundado el
+                        <strong>13 de septiembre de 2001</strong> por el señor
+                        <strong>Valentín Mendoza Pérez</strong>, quien identificó la necesidad de brindar un servicio
+                        confiable de reparación de electrodomésticos a los habitantes de Tres Valles, Veracruz.
+                    </p>
+                    <p>
+                        En sus inicios, el taller operaba desde el domicilio familiar, atendiendo principalmente
+                        <strong>lavadoras, ventiladores e instalaciones eléctricas</strong>. Gracias a la experiencia
+                        de don Valentín como electricista en la empresa
+                        <em>Mexicana de Papel Periódico</em>, especializada en el <strong>embobinado de motores</strong>,
+                        rápidamente se ganó la confianza de la comunidad.
+                    </p>
+                    <p>
+                        Con el paso del tiempo, el trabajo aumentó y fue necesario establecerse en un
+                        <strong>local comercial</strong>, donde actualmente continúa brindando servicio. La
+                        publicidad siempre ha sido de boca en boca, lo que permitió que la clientela se extendiera
+                        más allá de Tres Valles hacia otros municipios cercanos.
+                    </p>
+                </div>
+
+                <div class="col-lg-6">
+                    <img src="img/taller_fachada.png" alt="Fachada del taller"
+                         class="img-fluid historia-img shadow-sm">
+                </div>
+            </div>
+
+            <!-- LÍNEA DE TIEMPO -->
+            <section class="mb-5">
+                <h2 class="h4 mb-3">Línea de tiempo del Taller</h2>
+                <div class="row">
+                    <div class="col-lg-8">
+                        <div class="timeline">
+
+                            <div class="timeline-item">
+                                <div class="timeline-year">2001 · Fundación</div>
+                                <p class="mb-1">
+                                    Inicio de actividades del Taller de Electrodomésticos Mendoza en el domicilio del
+                                    fundador, atendiendo reparaciones básicas de electrodomésticos.
+                                </p>
+                                <p class="text-muted small mb-0">
+                                    Se consolida la idea de ofrecer un lugar donde el cliente se sienta escuchado y
+                                    pueda confiar en que su equipo será reparado de la mejor manera posible.
+                                </p>
+                            </div>
+
+                            <div class="timeline-item">
+                                <div class="timeline-year">Años posteriores · Crecimiento</div>
+                                <p class="mb-1">
+                                    La demanda por servicios de reparación de lavadoras, ventiladores, bombas de agua y
+                                    motores eléctricos aumenta de forma constante.
+                                </p>
+                                <p class="text-muted small mb-0">
+                                    La recomendación de los clientes se convierte en el principal medio de publicidad.
+                                </p>
+                            </div>
+
+                            <div class="timeline-item">
+                                <div class="timeline-year">Traslado a local comercial</div>
+                                <p class="mb-1">
+                                    Debido al incremento de trabajo, el taller se traslada a un local comercial,
+                                    brindando un espacio más cómodo para recibir equipos y atender a los clientes.
+                                </p>
+                                <p class="text-muted small mb-0">
+                                    El taller comienza a ser un punto de referencia en la zona para reparaciones de
+                                    electrodomésticos.
+                                </p>
+                            </div>
+
+                            <div class="timeline-item">
+                                <div class="timeline-year">Expansión regional</div>
+                                <p class="mb-1">
+                                    La calidad del trabajo permite que lleguen clientes de otros municipios cercanos,
+                                    ampliando el alcance del taller fuera de Tres Valles.
+                                </p>
+                                <p class="text-muted small mb-0">
+                                    La seriedad y experiencia de don Valentín se convierten en la carta de presentación
+                                    del negocio.
+                                </p>
+                            </div>
+
+                            <div class="timeline-item">
+                                <div class="timeline-year">Transición generacional</div>
+                                <p class="mb-1">
+                                    La administración del taller pasa a manos de su hijo
+                                    <strong>Luis Alberto Mendoza Cuevas</strong>, quien continúa con la misma filosofía
+                                    de trabajo, manteniendo la atención cercana al cliente.
+                                </p>
+                                <p class="text-muted small mb-0">
+                                    Aunque ya no trabaja de base en el taller, don Valentín sigue atendiendo a clientes
+                                    que lo buscan hasta su domicilio.
+                                </p>
+                            </div>
+
+                            <div class="timeline-item">
+                                <div class="timeline-year">Actualidad</div>
+                                <p class="mb-1">
+                                    El taller mantiene su compromiso de ser un lugar donde el cliente tenga la
+                                    confianza de que su equipo será reparado con honestidad y calidad.
+                                </p>
+                                <p class="text-muted small mb-0">
+                                    La creación del sitio web forma parte de la evolución del taller, buscando llegar a
+                                    más personas y facilitar la comunicación con sus clientes.
+                                </p>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- ANIVERSARIO 24 AÑOS -->
+            <section class="mb-5">
+                <h2 class="h4 mb-3">Celebración de nuestro aniversario</h2>
+                <p>
+                    El <strong>13 de septiembre de 2025</strong> el Taller de Electrodomésticos Mendoza celebró
+                    <strong>24 años de servicio</strong> a la comunidad de Tres Valles y la región. Para conmemorar
+                    esta fecha especial se organizó un convivio con clientes, amigos y familiares, contando incluso con
+                    la presencia de medios de comunicación como <em>La Retro 88.7 FM</em>.
+                </p>
+                <p class="mb-4">
+                    Durante el evento se realizaron rifas, se entregaron obsequios y se reforzó el compromiso de seguir
+                    ofreciendo un servicio cercano, honesto y de calidad. A continuación se muestran algunos momentos
+                    representativos de esa celebración.
+                </p>
+
+                <div class="row g-4">
+                    <!-- IMAGEN 1: COMIDA CON CLIENTES -->
+                    <div class="col-md-4">
+                        <div class="card event-card">
+                            <img src="img/AniversarioComida.jpeg" alt="Convivio con clientes">
+                            <div class="card-body">
+                                <h5 class="card-title mb-1">Convivio con los clientes</h5>
+                                <p class="card-text small mb-0">
+                                    Durante la mañana se compartió alimentos y bebida con los clientes, creando un
+                                    ambiente de confianza y agradecimiento por todos estos años de preferencia.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- IMAGEN 2: RIFA Y REGALOS -->
+                    <div class="col-md-4">
+                        <div class="card event-card">
+                            <img src="img/Rifa1.jpeg" alt="Rifa de productos">
+                            <div class="card-body">
+                                <h5 class="card-title mb-1">Rifas y regalos</h5>
+                                <p class="card-text small mb-0">
+                                    El propietario, <strong>Luis Alberto Mendoza</strong>, entregó productos de
+                                    electrodomésticos como parte de una rifa gratuita para agradecer la confianza de
+                                    los clientes frecuentes.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- IMAGEN 3: ENTREGA PERSONAL DE OBSEQUIO -->
+                    <div class="col-md-4">
+                        <div class="card event-card">
+                            <img src="img/Rifa2.jpeg" alt="Entrega de obsequio a cliente">
+                            <div class="card-body">
+                                <h5 class="card-title mb-1">Cercanía con cada persona</h5>
+                                <p class="card-text small mb-0">
+                                    En varios momentos del evento, Luis Alberto entregó personalmente los obsequios a
+                                    los ganadores, reforzando el trato directo y humano que caracteriza al taller.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- VALORES -->
+            <section>
+                <h2 class="h4 mb-3">Nuestros valores</h2>
+                <div class="row g-3">
+                    <div class="col-md-4">
+                        <div class="border rounded-4 p-3 h-100">
+                            <h5 class="mb-1"><i class="fas fa-handshake me-1"></i> Honestidad</h5>
+                            <p class="mb-0 small">
+                                Se brinda un diagnóstico claro y se recomienda únicamente lo que el equipo realmente necesita.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="border rounded-4 p-3 h-100">
+                            <h5 class="mb-1"><i class="fas fa-tools me-1"></i> Calidad en el trabajo</h5>
+                            <p class="mb-0 small">
+                                Cada reparación se realiza con cuidado, utilizando refacciones adecuadas y pruebas de funcionamiento.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="border rounded-4 p-3 h-100">
+                            <h5 class="mb-1"><i class="fas fa-users me-1"></i> Trato cercano</h5>
+                            <p class="mb-0 small">
+                                El cliente es escuchado y atendido con respeto, como parte de la comunidad a la que se sirve.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+        </div>
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="py-3 text-center mt-auto">
+        <small>© <span id="year"></span> Taller de Electrodomésticos Mendoza – Tres Valles, Veracruz.</small>
+    </footer>
+
+    <script>
+        document.getElementById("year").textContent = new Date().getFullYear();
+    </script>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>
